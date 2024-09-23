@@ -1,7 +1,5 @@
 import React from 'react';
-import './App.css';
-import {findAllByDisplayValue} from "@testing-library/react";
-
+import './App.css
 
 function App() {
     return (
