@@ -1,26 +1,21 @@
 import React from 'react';
-import './App.css'
-import Accordion from "./components/Accordion.tsx";
-import {Rating} from "./components/Rating";
+import './App.css';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Profile from "./components/Profile/Profile";
 
-function App() {
+
+
+
+const App = () => {
     return (
-        <div>
-            <PageTitle title={"My friends"}/>
-            <Accordion titleValue={"Menu"}/>
-            <Accordion titleValue={"Users"}/>
-            <Rating value={6}/>
+        <div className = 'app-wrapper' >
+            <Header />
+            <Navbar />
+            <Profile/>
         </div>
     );
 }
-
-type PageTitlePropsType = {
-    title: string
-}
-function PageTitle(props: PageTitlePropsType) {
-    return <h1>{props.title}</h1>
-}
-
 
 export default App;
 
