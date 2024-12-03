@@ -7,7 +7,9 @@
     padding: 10px;
 }
 
-
+.dialogsItems a:active,a:focus {
+    color: gold;
+}
 .messages{
     padding: 10px
 }
