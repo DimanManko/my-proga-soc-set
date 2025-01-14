@@ -2,7 +2,7 @@ import React from 'react';
 import classes from "./ProfileInfo.module.css"
 
 
-const ProfileInfo = () => {
+export const ProfileInfo = () => {
     return (
         <div>
             <div>
@@ -15,5 +15,3 @@ const ProfileInfo = () => {
     )
 }
 
-
-export default ProfileInfo;

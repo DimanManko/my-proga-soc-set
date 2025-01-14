@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from "./Profile.module.css"
-import MyPosts from "./MyPosts/Post/MyPosts";
-import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
+import {MyPosts} from "./MyPosts/Post/MyPosts";
+import {ProfileInfo} from "./MyPosts/ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+export const Profile = () => {
     return (
         <div>
             <ProfileInfo/>
@@ -13,4 +13,3 @@ const Profile = () => {
 }
 
 
-export default Profile;
