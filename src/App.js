@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import {Profile} from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {ObjectCopy} from "./components/CopyObject/Copy";
 
 
 export const App = (props) => {
@@ -22,6 +23,7 @@ export const App = (props) => {
                     </div>
                 </div>
             </BrowserRouter>
+            {/*<ObjectCopy/>*/}
         </div>
     )
 }
