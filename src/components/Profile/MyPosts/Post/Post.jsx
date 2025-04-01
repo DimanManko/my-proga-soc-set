@@ -1,15 +1,44 @@
 import React from 'react';
 import classes from "./Post.module.css"
-
+import AntonReva from "../../../../Mylogo/AntonReva.png";
 
 
 const Post = (props) => {
+
+    // props.posts.filter((res, el) => {
+    //     if (el.id === 3) {
+    //         return
+    //         <div className={classes.item}>
+    //             <img src={AntonReva}/>
+    //             {props.message}
+    //             <div>
+    //                  <span>like</span> {props.likesCount}
+    //             </div>
+    //         </div>
+    //     } else {
+    //         return res;
+    //     }
+    // }, {})
+
+    // const post = props.posts.filter(el=> el.id === 3)
+    // const listItems = props.posts.map((posts) => (
+    //     <div className={classes.item}>
+    //         <img src={AntonReva} />
+    //         <p>
+    //             {' ' + post + ' '}
+    //         </p>
+    //     </div>
+    // ));
+
+
     return(
+
         <div className={classes.item}>
-            <img src="https://avatars.mds.yandex.net/i?id=c5abea67d90ba463edf259ecc991210c-5235144-images-thumbs&n=13"/>
+            {/*{post}*/}
+            <img src={AntonReva}/>
             {props.message}
             <div>
-            <span>like</span> {props.likesCount}
+                <span>like</span> {props.likesCount}
             </div>
         </div>
     )

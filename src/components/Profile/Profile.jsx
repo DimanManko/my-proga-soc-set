@@ -3,11 +3,13 @@ import classes from "./Profile.module.css"
 import {MyPosts} from "./MyPosts/Post/MyPosts";
 import {ProfileInfo} from "./MyPosts/ProfileInfo/ProfileInfo";
 
-export const Profile = () => {
+export const Profile = (props) => {
+
+
     return (
         <div>
             <ProfileInfo/>
-            <MyPosts/>
+            <MyPosts posts={props.state.posts} addPost={props.addPost}/>
         </div>
     )
 }

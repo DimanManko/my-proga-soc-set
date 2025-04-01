@@ -4,25 +4,25 @@ import Post from "./Post";
 
 export function MyPosts(props) {
 
-    let posts = [
-        {id:1, message:"Привет, как дела?", likesCount: 12 },
-        {id:2, message:"это мой первый пост", likesCount: 115 },
-        {id:3, message:"Что делаешь завтра?",likesCount: 5 },
-        {id:4, message:"Привет, сходил сегодня в кино",likesCount: 10 },
-        {id:5, message:"Завтра едим на рыбалку",likesCount: 30 }
-    ]
 
-    let postsElements = posts.map (p =>  <Post message={p.message} likesCount={p.likesCount}/>)
+    let postsElements = props.posts.map (p =>  <Post message={p.message} likesCount={p.likesCount}/>)
+
+    let addPost = () => {
+        let text = newPostElement.current.value
+        props.addPost ( text )
+        newPostElement.current.value = ""
+    }
+    let newPostElement = React.createRef()
 
     return (
         <div className={classes.postsBlock}>
             <h3> My posts</h3>
             <div>
                 <div>
-                    <textarea> </textarea>
+                    <textarea ref={newPostElement}> </textarea>
                 </div>
                 <div>
-                    <button>Add post</button>
+                    <button onClick={ addPost }>Add post</button>
                 </div>
             </div>
             <div className={classes.posts}>
@@ -30,7 +30,6 @@ export function MyPosts(props) {
             </div>
             <div className={classes.posts}>
                 {postsElements}
-
             </div>
         </div>
     )
