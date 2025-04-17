@@ -1,26 +1,13 @@
 import React from 'react';
 
 
-export const ObjectCopy = () =>{
-    return (
-        <h3>Работа с копией объекта</h3>
-    )
+function greet(name) {
+    console.log(`Привет, ${name}!`);
 }
 
-const A = {
-    name: "Dima",
-    protocol: "https",
-    isOnline: true,
-    students: ["Ivan", "andrey", "sveta"],
-    classroom:{
-        teatcher:{
-            name:"wew",
-            age: 18
-        }
-    }
+function runCallback(cb) {
+    cb('Алиса');
 }
-A.students.push("Dima")
-const B = {...A}
 
+greet(runCallback); // Выводит на печать: «Привет, Алиса!» [3](https://sky.pro/wiki/javascript/peredacha-funktsiy-kak-parametrov-v-java-script-bez-eval/)
 
-console.log(B)
