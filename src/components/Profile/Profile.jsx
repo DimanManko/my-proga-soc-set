@@ -2,7 +2,7 @@ import React from 'react';
 import {ProfileInfo} from "./MyPosts/ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/Post/MyPostsContainer";
 
-export const Profile = () => {
+const Profile = () => {
 
 
     return (
@@ -13,4 +13,4 @@ export const Profile = () => {
     )
 }
 
-
+export default Profile
